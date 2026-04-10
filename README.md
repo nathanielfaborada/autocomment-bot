@@ -1,54 +1,48 @@
-# Autocomment & Autowatcher Bot
+# Autocomment Bot
 
-Automation bots for Facebook auto-commenting and YouTube auto-watching.
+Automation bot for Facebook auto-commenting using Pyppeteer (headless Chromium).
 
 ## Requirements
 
-- Python 3.10+
-- Chromium (included in `chrome-win/`)
+- Python 3.8+
+- Google Chrome installed at `C:\Program Files\Google\Chrome\Application\chrome.exe`
 
-## Installation
+## Setup
 
 1. Install dependencies:
 
 ```bash
-pip install pyppeteer python-dotenv requests
+pip install pyppeteer python-dotenv
 ```
 
-2. If Chromium is not yet downloaded:
-
-```bash
-py chromium_downloader.py
-```
-
-## Configuration
-
-Edit `.env` with your settings:
+2. Create a `.env` file in the project root with your account credentials:
 
 ```env
-CHROME_PATH=C:\path\to\chrome-win\chrome.exe
+ACCOUNT1_EMAIL=your_email@gmail.com
+ACCOUNT1_PASSWORD=your_password
 
-# YouTube Watcher
-YOUTUBE_VIDEO_URL=https://www.youtube.com/watch?v=YOUR_VIDEO_ID
-WATCH_DURATION_SECONDS=120
-NUM_WATCHERS=4
+ACCOUNT2_EMAIL=your_email@gmail.com
+ACCOUNT2_PASSWORD=your_password
+
+ACCOUNT3_EMAIL=your_email@gmail.com
+ACCOUNT3_PASSWORD=your_password
+
+ACCOUNT4_EMAIL=your_email@gmail.com
+ACCOUNT4_PASSWORD=your_password
 ```
+
+> **Note:** Never commit your `.env` file to version control.
 
 ## Usage
 
-**YouTube Auto-Watcher:**
 ```bash
-py autowatcher.py
+python autocomment.py
 ```
 
-Opens `NUM_WATCHERS` browser windows simultaneously, each watching the video for ~`WATCH_DURATION_SECONDS` seconds (with slight random variation).
+## Contributors
 
-**Facebook Auto-Commenter:**
-```bash
-py autocomment.py
-```
+Students of College of Mary Immaculate  
+Bachelor of Science in Computer Science — BSCS 2-A
 
-## Notes
-
-- `chrome-win/`, `chromium-win.zip`, and `.env` are excluded from git
-- Audio is muted on all watcher sessions
+- [nathanielfaborada](https://github.com/nathanielfaborada)
+- [johnpaul-bodino](https://github.com/johnpaul-bodino)
